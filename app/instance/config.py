@@ -1,12 +1,12 @@
 
 # database
 
-username = 'adrien'
-mdp = 'adr13NjMy'
+username = 'root'
+mdp = 'adrien'
 db_name = 'nane'
 
 SECRET_KEY='dev',
-SQLALCHEMY_DATABASE_URI=f"mysql://{username}:{mdp}@localhost:3306/{db_name}"
+SQLALCHEMY_DATABASE_URI=f"mysql://{username}:{mdp}@mysql:3306/{db_name}"
 
 # Sécurity
 

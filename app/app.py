@@ -1,7 +1,5 @@
 import os
 
-import sys
-print(sys.path)
 # Flask + SQLAlchemy
 
 from flask import Flask, render_template, request, session
