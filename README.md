@@ -10,9 +10,10 @@ Python
 
 Les fichiers docker à la racine permettent de lancer un serveur avec python, mysql et phpmyadmin.
 
-`docker-compose up --force-recreate --buid -d`
+`docker-compose up --force-recreate --build -d`
 
 # Branche
 
 Branche master
-Braanche dev
+
+Branche dev
