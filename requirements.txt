@@ -1,0 +1,6 @@
+flask
+pandas
+flask_wtf
+flask_sqlalchemy
+wtforms
+mysqlclient

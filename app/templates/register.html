@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="section__main">
+<p>{{result}}</p>
+    <form method="POST" action="/register">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username(size=20) }}
+        {{ form.email.label }} {{ form.email(size=20) }}
+        {{ form.password.label }} {{ form.password(size=20) }}
+        {{ form.birth.label }} {{ form.birth(size=20) }}
+        {{ form.gender.label }} {{ form.gender}}
+        {{ form.regime.label }} {{ form.regime}}
+        {{ form.avatar.label }} {{ form.avatar}}
+        <input type="submit" value="Go">
+    </form>
+
+
+
+
+</div>
+{% endblock content %}

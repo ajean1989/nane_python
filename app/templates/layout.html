@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome !{% endblock %}</title>
+        <link rel="stylesheet" href={{url_for('static', filename='app.css')}} />
+    </head>
+    <body>
+        {% block body %}
+        <header>
+            <div class="header--header">
+            <a href="/"><div>Nane's Cooking</div></a>
+            <a href="/register"><div>Register</div></a>
+            <a href="/login"><div>Login</div></a>
+            <a href="/test"><div>Test</div></a>
+            <a href="/logout"><div>Logout</div></a>
+            </div>
+            <div class="header--search-bar"></div>
+            <a href="/profil"><div class="header--profil"></div></a>
+        </header>
+
+        <section>
+            <div class="section__nav">
+
+            </div>
+
+            {% if session['username'] %}
+                <p>Hello {{session['username']}}</p>
+            {% endif %}
+
+            {% block content %}
+            
+            {% endblock content %}
+
+        </section>
+
+        <footer>
+        </footer>
+        {% endblock body %}
+    </body>
+</html>
