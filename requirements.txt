@@ -5,3 +5,4 @@ flask_sqlalchemy
 wtforms
 mysqlclient
 passlib
+Flask-Migrate
