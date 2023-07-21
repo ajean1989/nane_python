@@ -4,8 +4,23 @@ import os
 
 from flask import Flask, render_template, request, session
 
-app = Flask(__name__, instance_relative_config=True)
-app.config.from_pyfile('config.py')
+def create_app():
+    app = Flask(__name__, instance_relative_config=True)
+
+    # Config
+    app.config.from_pyfile('config.py')
+
+    # Database
+    from db import db
+    db.init_app(app)
+
+    # Blueprint API
+    from blueprint.api.blueprint_api import api 
+    app.register_blueprint(api)
+
+    return app
+
+app = create_app()
 
 # Autres dossiers
 
