@@ -1,4 +1,4 @@
-from models.users import User
+from app.models.user import User
 from db import db 
 
 def verify_doublons(sql, username, password, email, birth, gender, regime): 

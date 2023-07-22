@@ -3,15 +3,16 @@ from flask import redirect, url_for
 from sqlalchemy import text
 
 class User(db.Model):
-    user_id = db.Column(db.Integer, primary_key=True)
-    image_id = db.Column(db.Integer, unique=True, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
+    id_user = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     password = db.Column(db.String, unique=False, nullable=False)
-    birth = db.Column(db.DateTime, unique=False, nullable=False)
-    gender = db.Column(db.String, unique=False, nullable=False)
-    regime = db.Column(db.String, unique=False, nullable=False)
-    status = db.Column(db.Integer, unique=False, nullable=False)
+    email = db.Column(db.String, unique=True, nullable=False)
+    birthday = db.Column(db.DateTime, unique=False, nullable=False)
+    gender = db.Column(db.Integer, unique=False, nullable=False)
+    diet = db.Column(db.Integer, unique=False, nullable=False)
+    statut = db.Column(db.Integer, unique=False, nullable=False)
+    view = db.Column(db.Integer, unique=False, nullable=False)
+    creation_date_user = db.Column(db.DateTime, unique=False, nullable=False)
 
 
     def create_user(username, password, email, birth, gender, regime):

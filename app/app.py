@@ -24,7 +24,7 @@ app = create_app()
 
 # Autres dossiers
 
-from models.users import *
+from app.models.user import *
 
 
 # Flask WTF
