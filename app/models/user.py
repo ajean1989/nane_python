@@ -4,9 +4,9 @@ from sqlalchemy import text
 
 class User(db.Model):
     id_user = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, unique=True, nullable=False)
-    password = db.Column(db.String, unique=False, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
+    username = db.Column(db.String(32), unique=True, nullable=False)
+    password = db.Column(db.String(128), unique=False, nullable=False)
+    email = db.Column(db.String(64), unique=True, nullable=False)
     birthday = db.Column(db.DateTime, unique=False, nullable=False)
     gender = db.Column(db.Integer, unique=False, nullable=False)
     diet = db.Column(db.Integer, unique=False, nullable=False)

@@ -4,6 +4,7 @@ import os
 
 from flask import Flask, render_template, request, session
 
+
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
@@ -12,7 +13,11 @@ def create_app():
 
     # Database
     from db import db
+    from flask_migrate import Migrate
+
     db.init_app(app)
+
+    migrate = Migrate(app, db)
 
     # Blueprint API
     from blueprint.api.blueprint_api import api 
@@ -24,7 +29,7 @@ app = create_app()
 
 # Autres dossiers
 
-from app.models.user import *
+from models.user import *
 
 
 # Flask WTF

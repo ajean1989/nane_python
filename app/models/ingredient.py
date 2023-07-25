@@ -2,5 +2,5 @@ from db import db
 
 
 class Ingredient(db.Model):
-    ingredient_id = db.Column(db.Integer, primary_key=True)
-    name_ingredient = db.Column(db.String, unique=True, nullable=False)
+    id_ingredient = db.Column(db.Integer, primary_key=True)
+    name_ingredient = db.Column(db.String(32), unique=True, nullable=False)
