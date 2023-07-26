@@ -9,3 +9,15 @@ class Post(db.Model):
     modification_date_post = db.Column(db.DateTime, unique=False, nullable=True)
     view = db.Column(db.Integer, unique=False, nullable=False)
     id_user = db.Column(db.Integer, unique=False, nullable=False)
+
+    def create_post():
+        pass
+
+    def get_post():
+        pass
+
+    def modify_post():
+        pass
+
+    def delete_post():
+        pass

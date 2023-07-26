@@ -10,3 +10,15 @@ class Notif(db.Model):
     id_recipe = db.Column(db.Integer, unique=False, nullable=True)
     id_post = db.Column(db.Integer, unique=False, nullable=True)
     id_like = db.Column(db.Integer, unique=False, nullable=True)
+
+    def create_notif():
+        pass
+
+    def get_notif():
+        pass
+
+    def modify_notif():
+        pass
+
+    def delete_notif():
+        pass

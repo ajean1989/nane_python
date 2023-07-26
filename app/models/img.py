@@ -9,3 +9,15 @@ class Img(db.Model):
     id_user = db.Column(db.Integer, unique=False, nullable=True)
     id_recipe = db.Column(db.Integer, unique=False, nullable=True)
     id_post = db.Column(db.Integer, unique=False, nullable=True)
+
+    def create_img():
+        pass
+
+    def get_img():
+        pass
+
+    def modify_img():
+        pass
+
+    def delete_img():
+        pass

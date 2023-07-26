@@ -6,3 +6,5 @@ wtforms
 mysqlclient
 passlib
 Flask-Migrate
+
+pytest

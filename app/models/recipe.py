@@ -15,3 +15,15 @@ class Recipe(db.Model):
     statut = db.Column(db.Integer, unique=False, nullable=False)
     view = db.Column(db.Integer, unique=False, nullable=False)
     id_user = db.Column(db.Integer, unique=False, nullable=False)
+
+    def create_recipe():
+        pass
+
+    def get_recipe():
+        pass
+
+    def modify_recipe():
+        pass
+
+    def delete_recipe():
+        pass
